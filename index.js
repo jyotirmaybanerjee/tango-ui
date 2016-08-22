@@ -9,6 +9,7 @@
 var NavBar = require('./lib/nav/NavBar');
 var FloatingActionButton = require('./lib/button/FloatingActionButton');
 var RaisedButton = require('./lib/button/RaisedButton');
+var Badge = require('./lib/badge/Badge');
 
 /**
  * Different UI components.
@@ -16,5 +17,6 @@ var RaisedButton = require('./lib/button/RaisedButton');
 module.exports = {
   NavBar: NavBar,
   FloatingActionButton: FloatingActionButton,
-  RaisedButton: RaisedButton
+  RaisedButton: RaisedButton,
+  Badge: Badge
 };

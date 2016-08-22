@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './badge.sass';
+import badgeStyles from './BadgeStyles.js';
 
 export default class Badge extends Component {
 
@@ -9,18 +9,25 @@ export default class Badge extends Component {
 
   render() {
 
-  	let kind = this.props.disabled ? 'disabled' : (this.props.primary ? 'primary' : this.props.secondary ? 'secondary' : 'default');
-  	let badgeClass = `badge ${kind}`
+  	let kind = this.props.primary ? 'primary' : this.props.secondary ? 'secondary' : 'default';
+    let badgeKind = {};
+    if(kind === 'primary') {
+      badgeKind = badgeStyles.badgePrimary;
+    } else if(kind === 'secondary') {
+      badgeKind = badgeStyles.badgeSecondary;
+    } else if(kind === 'default') {
+      badgeKind = badgeStyles.badgeDefault;
+    }
 
     return (
-      <span className={badgeClass}>
+      <span style={badgeKind}>
         {this.props.children}
       </span>
     );
   }
 }
 
-function exclusiveTypeCheck(props, propName) {  
+function exclusiveTypeCheck(props, propName) {
   if(props['primary'] && props['secondary']) {
   	return new Error('A button can not be more than one type');
   }
