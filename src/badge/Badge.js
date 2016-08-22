@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
-import badgeStyles from './BadgeStyles.js';
+var React = require('react');
+var badgeStyles = require('./BadgeStyles');
 
-export default class Badge extends Component {
+module.exports = React.createClass({
 
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+  render: function() {
 
   	let kind = this.props.primary ? 'primary' : this.props.secondary ? 'secondary' : 'default';
     let badgeKind = {};
@@ -25,16 +21,16 @@ export default class Badge extends Component {
       </span>
     );
   }
-}
+});
 
-function exclusiveTypeCheck(props, propName) {
-  if(props['primary'] && props['secondary']) {
-  	return new Error('A button can not be more than one type');
-  }
-  return null;
-}
-
-Badge.propTypes = {
-	primary: exclusiveTypeCheck,
-	secondary: exclusiveTypeCheck
-};
+// function exclusiveTypeCheck(props, propName) {
+//   if(props['primary'] && props['secondary']) {
+//   	return new Error('A button can not be more than one type');
+//   }
+//   return null;
+// }
+//
+// Badge.propTypes = {
+// 	primary: exclusiveTypeCheck,
+// 	secondary: exclusiveTypeCheck
+// };
