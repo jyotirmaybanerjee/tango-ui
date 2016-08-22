@@ -9,10 +9,11 @@ A slick UI component library for react
 
 ## Usage
 
-import { NavBar } from 'tango-ui';
+```javascript
+import { NavBar, RaisedButton, FloatingActionButton } from 'tango-ui';
+```
 
-let linksObj = ;
-
+```html
 <NavBar
   brand="Tango UI"
   links={[
@@ -21,6 +22,48 @@ let linksObj = ;
       { url: "/users", label: "Users" },
       { url: "/login", label: "Login" }
       ]} />
+```
+
+![Alt text](/screenshots/NavBar.png?raw=true "NavBar")
+
+
+```html
+
+<RaisedButton style={{margin: "12px"}}> Default </RaisedButton>
+
+<RaisedButton style={{margin: "12px"}} primary="true"> Primary </RaisedButton>
+
+<RaisedButton style={{margin: "12px"}} secondary="true"> Secondary </RaisedButton>
+
+<RaisedButton style={{margin: "12px"}} disabled="true"> Disabled </RaisedButton>
+```
+
+![Alt text](/screenshots/RaisedButton.png?raw=true "NavBar")
+
+```html
+<RaisedButton style={{margin: "12px"}} primary="true" fullWidth="true"> Primary + Full Width </RaisedButton>
+
+```
+
+
+![Alt text](/screenshots/RaisedButton_FullWidth.png?raw=true "NavBar")
+
+
+```html
+<FloatingActionButton> <i className="fa fa-plus"></i> </FloatingActionButton>
+
+<FloatingActionButton primary="true"> <i className="fa fa-plus"></i> </FloatingActionButton>
+
+<FloatingActionButton secondary="true"> <i className="fa fa-minus"></i> </FloatingActionButton>
+
+<FloatingActionButton disabled="true"> <i className="fa fa-plus"></i> </FloatingActionButton>
+
+```
+
+
+![Alt text](/screenshots/FloatingActionButton.png?raw=true "NavBar")
+
+
 
 ## Tests
 
@@ -33,4 +76,4 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Release History
 
-* 0.1.2 Initial release
+* 0.0.1 Initial release
