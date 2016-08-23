@@ -10,7 +10,7 @@ A slick UI component library for react
 ## Usage
 
 ```javascript
-import { NavBar, RaisedButton, FloatingActionButton } from 'tango-ui';
+import { NavBar, RaisedButton, FloatingActionButton, Tags } from 'tango-ui';
 ```
 
 ```html
@@ -38,7 +38,7 @@ import { NavBar, RaisedButton, FloatingActionButton } from 'tango-ui';
 <RaisedButton style={{margin: "12px"}} disabled="true"> Disabled </RaisedButton>
 ```
 
-![Alt text](/screenshots/RaisedButton.png?raw=true "NavBar")
+![Alt text](/screenshots/RaisedButton.png?raw=true "RaisedButton")
 
 ```html
 <RaisedButton style={{margin: "12px"}} primary="true" fullWidth="true"> Primary + Full Width </RaisedButton>
@@ -46,7 +46,7 @@ import { NavBar, RaisedButton, FloatingActionButton } from 'tango-ui';
 ```
 
 
-![Alt text](/screenshots/RaisedButton_FullWidth.png?raw=true "NavBar")
+![Alt text](/screenshots/RaisedButton_FullWidth.png?raw=true "RaisedButton FullWidth")
 
 
 ```html
@@ -61,8 +61,14 @@ import { NavBar, RaisedButton, FloatingActionButton } from 'tango-ui';
 ```
 
 
-![Alt text](/screenshots/FloatingActionButton.png?raw=true "NavBar")
+![Alt text](/screenshots/FloatingActionButton.png?raw=true "FloatingActionButton")
 
+
+```html
+<Tags value={this.state.simpleTags} onChange={::this.handleSimpleTagChange} />
+```
+
+![Alt text](/screenshots/tags.png?raw=true "Tags")
 
 
 ## Tests
