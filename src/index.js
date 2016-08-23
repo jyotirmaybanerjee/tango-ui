@@ -6,11 +6,12 @@
  * Licensed under the MIT license.
  */
 
-var NavBar = require('./lib/nav/NavBar');
-var FloatingActionButton = require('./lib/button/FloatingActionButton');
-var RaisedButton = require('./lib/button/RaisedButton');
-var Badge = require('./lib/badge/Badge');
-var Tags = require('./lib/tag/Tags');
+
+import NavBar from './nav/NavBar';
+import FloatingActionButton from './button/FloatingActionButton';
+import RaisedButton from './button/RaisedButton';
+import Badge from './badge/Badge';
+import Tags from './tag/Tags';
 
 /**
  * Different UI components.
