@@ -137,7 +137,7 @@
 	        ),
 	        _react2.default.createElement(_NavBar2.default, {
 	          brand: 'Tango UI',
-	          links: [{ url: "/members", label: "Members" }, { url: "/projects", label: "Projects" }, { url: "/users", label: "Users" }, { url: "/login", label: "Login" }] }),
+	          links: [{ url: '/members', label: 'Members' }, { url: '/projects', label: 'Projects' }, { url: '/users', label: 'Users' }, { url: '/login', label: 'Login' }] }),
 	        _react2.default.createElement(
 	          'article',
 	          null,
@@ -149,31 +149,31 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { marginLeft: "50px" } },
+	          { style: { marginLeft: '50px' } },
 	          _react2.default.createElement(
 	            _RaisedButton2.default,
-	            { style: { margin: "12px" } },
+	            { style: { margin: '12px' } },
 	            ' Default '
 	          ),
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
 	            _RaisedButton2.default,
-	            { style: { margin: "12px" }, primary: 'true' },
+	            { style: { margin: '12px' }, primary: 'true' },
 	            ' Primary '
 	          ),
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
 	            _RaisedButton2.default,
-	            { style: { margin: "12px" }, secondary: 'true' },
+	            { style: { margin: '12px' }, secondary: 'true' },
 	            ' Secondary '
 	          ),
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
 	            _RaisedButton2.default,
-	            { style: { margin: "12px" }, disabled: 'true' },
+	            { style: { margin: '12px' }, disabled: 'true' },
 	            ' Disabled '
 	          ),
 	          _react2.default.createElement('br', null),
@@ -181,7 +181,7 @@
 	        ),
 	        _react2.default.createElement(
 	          _RaisedButton2.default,
-	          { style: { margin: "12px" }, primary: 'true', fullWidth: 'true' },
+	          { style: { margin: '12px' }, primary: 'true', fullWidth: 'true' },
 	          ' Primary + Full Width '
 	        ),
 	        _react2.default.createElement(
@@ -195,7 +195,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { marginLeft: "50px" } },
+	          { style: { marginLeft: '50px' } },
 	          _react2.default.createElement(
 	            _FloatingActionButton2.default,
 	            null,
@@ -242,24 +242,24 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { marginLeft: "50px" } },
+	          { style: { marginLeft: '50px' } },
 	          _react2.default.createElement(
 	            _Badge2.default,
 	            null,
-	            "Default"
+	            'Default'
 	          ),
 	          _react2.default.createElement(
 	            _Badge2.default,
 	            { primary: 'true' },
 	            ' ',
-	            "Primary",
+	            'Primary',
 	            ' '
 	          ),
 	          _react2.default.createElement(
 	            _Badge2.default,
 	            { secondary: 'true' },
 	            ' ',
-	            "Secondary",
+	            'Secondary',
 	            ' '
 	          )
 	        ),
@@ -274,7 +274,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { marginLeft: "50px" } },
+	          { style: { marginLeft: '50px' } },
 	          _react2.default.createElement(_Tags2.default, { value: this.state.simpleTags, onChange: this.handleSimpleTagChange.bind(this) })
 	        ),
 	        _react2.default.createElement(
@@ -288,13 +288,13 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { marginLeft: "50px" } },
+	          { style: { marginLeft: '50px' } },
 	          _react2.default.createElement(_Tags2.default, {
 	            value: this.state.emailTags,
 	            addKeys: [9, 13, 32, 186, 188] // tab, enter, space, semicolon, comma
 	            , onlyUnique: true,
 	            addOnPaste: true,
-	            placeholder: "Email",
+	            placeholder: 'Email',
 	            validationRegex: EMAIL_VALIDATION_REGEX,
 	            pasteSplit: function pasteSplit(data) {
 	              return data.replace(/[\r\n,;]/g, ' ').split(' ').map(function (d) {
@@ -314,7 +314,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { marginLeft: "50px" } },
+	          { style: { marginLeft: '50px' } },
 	          _react2.default.createElement(
 	            'form',
 	            null,
@@ -21690,31 +21690,13 @@
 
 	'use strict';
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _extends = Object.assign || function (target) {
-	  for (var i = 1; i < arguments.length; i++) {
-	    var source = arguments[i];for (var key in source) {
-	      if (Object.prototype.hasOwnProperty.call(source, key)) {
-	        target[key] = source[key];
-	      }
-	    }
-	  }return target;
-	};
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _createClass = function () {
-	  function defineProperties(target, props) {
-	    for (var i = 0; i < props.length; i++) {
-	      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-	    }
-	  }return function (Constructor, protoProps, staticProps) {
-	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-	  };
-	}();
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -21732,41 +21714,17 @@
 
 	var _Layout2 = _interopRequireDefault(_Layout);
 
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _objectWithoutProperties(obj, keys) {
-	  var target = {};for (var i in obj) {
-	    if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
-	  }return target;
-	}
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-	function _defineProperty(obj, key, value) {
-	  if (key in obj) {
-	    Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });
-	  } else {
-	    obj[key] = value;
-	  }return obj;
-	}
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-	function _classCallCheck(instance, Constructor) {
-	  if (!(instance instanceof Constructor)) {
-	    throw new TypeError("Cannot call a class as a function");
-	  }
-	}
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _possibleConstructorReturn(self, call) {
-	  if (!self) {
-	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-	}
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) {
-	  if (typeof superClass !== "function" && superClass !== null) {
-	    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-	}
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	function defaultPasteSplit(data) {
 	  return data.split(' ').map(function (d) {
@@ -21793,6 +21751,7 @@
 	    value: function _getTagDisplayValue(tag) {
 	      var tagDisplayProp = this.props.tagDisplayProp;
 
+
 	      if (tagDisplayProp) {
 	        return tag[tagDisplayProp];
 	      }
@@ -21803,6 +21762,7 @@
 	    key: '_makeTag',
 	    value: function _makeTag(tag) {
 	      var tagDisplayProp = this.props.tagDisplayProp;
+
 
 	      if (tagDisplayProp) {
 	        return _defineProperty({}, tagDisplayProp, tag);
@@ -21835,6 +21795,7 @@
 	      var onlyUnique = _props.onlyUnique;
 	      var maxTags = _props.maxTags;
 	      var value = _props.value;
+
 
 	      if (onlyUnique) {
 	        tags = _helpers2.default.removeDuplicates(tags);
@@ -21893,6 +21854,7 @@
 	    value: function accept() {
 	      var tag = this.state.tag;
 
+
 	      if (tag !== '') {
 	        tag = this._makeTag(tag);
 	        return this._addTags([tag]);
@@ -21918,6 +21880,7 @@
 	      var _props2 = this.props;
 	      var addOnPaste = _props2.addOnPaste;
 	      var pasteSplit = _props2.pasteSplit;
+
 
 	      if (!addOnPaste) {
 	        return;
@@ -21987,6 +21950,7 @@
 	    value: function handleOnFocus(e) {
 	      var onFocus = this.props.inputProps.onFocus;
 
+
 	      if (onFocus) {
 	        onFocus(e);
 	      }
@@ -21997,6 +21961,7 @@
 	    key: 'handleOnBlur',
 	    value: function handleOnBlur(e) {
 	      var onBlur = this.props.inputProps.onBlur;
+
 
 	      this.setState({ isFocused: false });
 
@@ -22084,6 +22049,7 @@
 	      var tag = _state.tag;
 	      var isFocused = _state.isFocused;
 
+
 	      var tagComponents = value.map(function (tag, index) {
 	        return _extends({
 	          tag: tag,
@@ -22105,7 +22071,11 @@
 	        addTag: this.addTag.bind(this)
 	      }, this.inputProps());
 
-	      return _react2.default.createElement('div', { ref: 'div', onClick: this.handleClick.bind(this), style: _TagStyle2.default.tags }, _react2.default.createElement(_Layout2.default, { tagComponents: tagComponents, inputComponent: inputComponent }));
+	      return _react2.default.createElement(
+	        'div',
+	        { ref: 'div', onClick: this.handleClick.bind(this), style: _TagStyle2.default.tags },
+	        _react2.default.createElement(_Layout2.default, { tagComponents: tagComponents, inputComponent: inputComponent })
+	      );
 	    }
 	  }]);
 
@@ -22159,9 +22129,7 @@
 
 	var _styleVariables2 = _interopRequireDefault(_styleVariables);
 
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  tags: {
@@ -22235,21 +22203,9 @@
 
 	'use strict';
 
-	var _createClass = function () {
-	  function defineProperties(target, props) {
-	    for (var i = 0; i < props.length; i++) {
-	      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-	    }
-	  }return function (Constructor, protoProps, staticProps) {
-	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-	  };
-	}();
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	function _classCallCheck(instance, Constructor) {
-	  if (!(instance instanceof Constructor)) {
-	    throw new TypeError("Cannot call a class as a function");
-	  }
-	}
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Helpers = function () {
 	  function Helpers() {
@@ -22293,31 +22249,13 @@
 
 	'use strict';
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _extends = Object.assign || function (target) {
-	  for (var i = 1; i < arguments.length; i++) {
-	    var source = arguments[i];for (var key in source) {
-	      if (Object.prototype.hasOwnProperty.call(source, key)) {
-	        target[key] = source[key];
-	      }
-	    }
-	  }return target;
-	};
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _createClass = function () {
-	  function defineProperties(target, props) {
-	    for (var i = 0; i < props.length; i++) {
-	      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-	    }
-	  }return function (Constructor, protoProps, staticProps) {
-	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-	  };
-	}();
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -22331,27 +22269,13 @@
 
 	var _Tag2 = _interopRequireDefault(_Tag);
 
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) {
-	  if (!(instance instanceof Constructor)) {
-	    throw new TypeError("Cannot call a class as a function");
-	  }
-	}
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _possibleConstructorReturn(self, call) {
-	  if (!self) {
-	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-	}
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) {
-	  if (typeof superClass !== "function" && superClass !== null) {
-	    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-	}
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var Layout = function (_Component) {
 	  _inherits(Layout, _Component);
@@ -22370,7 +22294,12 @@
 	        return _react2.default.createElement(_Tag2.default, _extends({}, tagProps, { key: index, index: index }));
 	      });
 
-	      return _react2.default.createElement('span', null, tagComponents, _react2.default.createElement(_Input2.default, this.props.inputComponent));
+	      return _react2.default.createElement(
+	        'span',
+	        null,
+	        tagComponents,
+	        _react2.default.createElement(_Input2.default, this.props.inputComponent)
+	      );
 	    }
 	  }]);
 
@@ -22385,31 +22314,13 @@
 
 	'use strict';
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _extends = Object.assign || function (target) {
-	  for (var i = 1; i < arguments.length; i++) {
-	    var source = arguments[i];for (var key in source) {
-	      if (Object.prototype.hasOwnProperty.call(source, key)) {
-	        target[key] = source[key];
-	      }
-	    }
-	  }return target;
-	};
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _createClass = function () {
-	  function defineProperties(target, props) {
-	    for (var i = 0; i < props.length; i++) {
-	      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-	    }
-	  }return function (Constructor, protoProps, staticProps) {
-	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-	  };
-	}();
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -22419,33 +22330,15 @@
 
 	var _TagStyle2 = _interopRequireDefault(_TagStyle);
 
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _objectWithoutProperties(obj, keys) {
-	  var target = {};for (var i in obj) {
-	    if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
-	  }return target;
-	}
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-	function _classCallCheck(instance, Constructor) {
-	  if (!(instance instanceof Constructor)) {
-	    throw new TypeError("Cannot call a class as a function");
-	  }
-	}
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _possibleConstructorReturn(self, call) {
-	  if (!self) {
-	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-	}
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) {
-	  if (typeof superClass !== "function" && superClass !== null) {
-	    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-	}
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var Input = function (_Component) {
 	  _inherits(Input, _Component);
@@ -22493,31 +22386,13 @@
 
 	'use strict';
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _extends = Object.assign || function (target) {
-	  for (var i = 1; i < arguments.length; i++) {
-	    var source = arguments[i];for (var key in source) {
-	      if (Object.prototype.hasOwnProperty.call(source, key)) {
-	        target[key] = source[key];
-	      }
-	    }
-	  }return target;
-	};
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _createClass = function () {
-	  function defineProperties(target, props) {
-	    for (var i = 0; i < props.length; i++) {
-	      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-	    }
-	  }return function (Constructor, protoProps, staticProps) {
-	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-	  };
-	}();
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -22527,33 +22402,15 @@
 
 	var _TagStyle2 = _interopRequireDefault(_TagStyle);
 
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _objectWithoutProperties(obj, keys) {
-	  var target = {};for (var i in obj) {
-	    if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
-	  }return target;
-	}
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-	function _classCallCheck(instance, Constructor) {
-	  if (!(instance instanceof Constructor)) {
-	    throw new TypeError("Cannot call a class as a function");
-	  }
-	}
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _possibleConstructorReturn(self, call) {
-	  if (!self) {
-	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-	}
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) {
-	  if (typeof superClass !== "function" && superClass !== null) {
-	    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-	}
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var Tag = function (_Component) {
 	  _inherits(Tag, _Component);
@@ -22576,9 +22433,22 @@
 
 	      var other = _objectWithoutProperties(_props, ['tag', 'index', 'disabled', 'onRemove', 'getTagDisplayValue']);
 
-	      return _react2.default.createElement('span', _extends({ key: index }, other, { style: _TagStyle2.default.tag }), getTagDisplayValue(tag), !disabled && _react2.default.createElement('a', { onClick: function onClick(e) {
-	          return onRemove(index);
-	        } }, _react2.default.createElement('span', { style: _TagStyle2.default.tagRemove }, 'x')));
+	      return _react2.default.createElement(
+	        'span',
+	        _extends({ key: index }, other, { style: _TagStyle2.default.tag }),
+	        getTagDisplayValue(tag),
+	        !disabled && _react2.default.createElement(
+	          'a',
+	          { onClick: function onClick(e) {
+	              return onRemove(index);
+	            } },
+	          _react2.default.createElement(
+	            'span',
+	            { style: _TagStyle2.default.tagRemove },
+	            'x'
+	          )
+	        )
+	      );
 	    }
 	  }]);
 
@@ -22603,22 +22473,39 @@
 	var Li = __webpack_require__(181);
 
 	module.exports = React.createClass({
-	    displayName: 'exports',
+	  displayName: 'exports',
 
-	    render: function render() {
 
-	        var links = this.props.links.map(function (link) {
+	  render: function render() {
 
-	            return React.createElement(Li, {
-	                linkStyle: navStyles.li,
-	                hoverLinkStyle: navStyles.liHovered,
-	                label: link.label,
-	                url: link.url,
-	                navAStyles: navStyles.a,
-	                key: link.label });
-	        });
-	        return React.createElement('nav', { style: navStyles }, React.createElement('section', { style: navStyles.menuHeader }, React.createElement('div', { style: navStyles.menuHeader.brand }, this.props.brand || '')), React.createElement('ul', { style: navStyles.ul }, links));
-	    }
+	    var links = this.props.links.map(function (link) {
+	      return React.createElement(Li, {
+	        linkStyle: navStyles.li,
+	        hoverLinkStyle: navStyles.liHovered,
+	        label: link.label,
+	        url: link.url,
+	        navAStyles: navStyles.a,
+	        key: link.label });
+	    });
+	    return React.createElement(
+	      'nav',
+	      { style: navStyles },
+	      React.createElement(
+	        'section',
+	        { style: navStyles.menuHeader },
+	        React.createElement(
+	          'div',
+	          { style: navStyles.menuHeader.brand },
+	          this.props.brand || ''
+	        )
+	      ),
+	      React.createElement(
+	        'ul',
+	        { style: navStyles.ul },
+	        links
+	      )
+	    );
+	  }
 	});
 
 /***/ },
@@ -22631,9 +22518,7 @@
 
 	var _styleVariables2 = _interopRequireDefault(_styleVariables);
 
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
 	  color: _styleVariables2.default.inverseColor,
@@ -22691,6 +22576,7 @@
 	module.exports = React.createClass({
 	  displayName: 'exports',
 
+
 	  getInitialState: function getInitialState() {
 	    return { hover: false };
 	  },
@@ -22708,7 +22594,15 @@
 	      linkStyle = this.props.linkStyle;
 	    }
 
-	    return React.createElement('li', { style: linkStyle, key: this.props.label, onMouseEnter: this.toggleHover, onMouseLeave: this.toggleHover }, React.createElement('a', { href: this.props.url, style: this.props.navAStyles }, this.props.label));
+	    return React.createElement(
+	      'li',
+	      { style: linkStyle, key: this.props.label, onMouseEnter: this.toggleHover, onMouseLeave: this.toggleHover },
+	      React.createElement(
+	        'a',
+	        { href: this.props.url, style: this.props.navAStyles },
+	        this.props.label
+	      )
+	    );
 	  }
 	});
 
@@ -22718,21 +22612,21 @@
 
 	'use strict';
 
-	var _extends = Object.assign || function (target) {
-	  for (var i = 1; i < arguments.length; i++) {
-	    var source = arguments[i];for (var key in source) {
-	      if (Object.prototype.hasOwnProperty.call(source, key)) {
-	        target[key] = source[key];
-	      }
-	    }
-	  }return target;
-	};
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var React = __webpack_require__(1);
-	var floatingButtonStyles = __webpack_require__(183);
+	var _react = __webpack_require__(1);
 
-	module.exports = React.createClass({
+	var _react2 = _interopRequireDefault(_react);
+
+	var _FloatingButtonStyle = __webpack_require__(183);
+
+	var _FloatingButtonStyle2 = _interopRequireDefault(_FloatingButtonStyle);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = _react2.default.createClass({
 	  displayName: 'exports',
+
 
 	  getInitialState: function getInitialState() {
 	    return { hover: false };
@@ -22741,18 +22635,6 @@
 	  toggleHover: function toggleHover() {
 	    this.setState({ hover: !this.state.hover });
 	  },
-
-	  // exclusiveTypeCheck: function(props, propName) {
-	  //   if(props['primary'] && props['secondary']) {
-	  //   	return new Error('A button can not be more than one type');
-	  //   }
-	  //   return null;
-	  // },
-	  //
-	  // propTypes: {
-	  //   primary: this.exclusiveTypeCheck,
-	  // 	secondary: this.exclusiveTypeCheck
-	  // },
 
 	  render: function render() {
 
@@ -22764,43 +22646,71 @@
 	    var innerSpanStyle = {};
 
 	    if (kind === 'disabled') {
-	      floatingBtnStyle = floatingButtonStyles.floatingBtnDisabled;
-	      btnStyle = floatingButtonStyles.buttonDisabled;
-	      innerContainerStyle = floatingButtonStyles.innerContainer;
-	      innerSpanStyle = floatingButtonStyles.innerSpanDisabled;
+	      floatingBtnStyle = _FloatingButtonStyle2.default.floatingBtnDisabled;
+	      btnStyle = _FloatingButtonStyle2.default.buttonDisabled;
+	      innerContainerStyle = _FloatingButtonStyle2.default.innerContainer;
+	      innerSpanStyle = _FloatingButtonStyle2.default.innerSpanDisabled;
 	    } else if (kind === 'primary') {
-	      floatingBtnStyle = floatingButtonStyles.floatingBtnNormal;
-	      btnStyle = floatingButtonStyles.buttonPrimary;
+	      floatingBtnStyle = _FloatingButtonStyle2.default.floatingBtnNormal;
+	      btnStyle = _FloatingButtonStyle2.default.buttonPrimary;
 	      if (this.state.hover) {
-	        innerContainerStyle = floatingButtonStyles.innerContainerNormaltHover;
+	        innerContainerStyle = _FloatingButtonStyle2.default.innerContainerNormaltHover;
 	      } else {
-	        innerContainerStyle = floatingButtonStyles.innerContainer;
+	        innerContainerStyle = _FloatingButtonStyle2.default.innerContainer;
 	      }
-	      innerSpanStyle = floatingButtonStyles.innerSpanNormal;
+	      innerSpanStyle = _FloatingButtonStyle2.default.innerSpanNormal;
 	    } else if (kind === 'secondary') {
-	      floatingBtnStyle = floatingButtonStyles.floatingBtnNormal;
-	      btnStyle = floatingButtonStyles.buttonSecondary;
+	      floatingBtnStyle = _FloatingButtonStyle2.default.floatingBtnNormal;
+	      btnStyle = _FloatingButtonStyle2.default.buttonSecondary;
 	      if (this.state.hover) {
-	        innerContainerStyle = floatingButtonStyles.innerContainerNormaltHover;
+	        innerContainerStyle = _FloatingButtonStyle2.default.innerContainerNormaltHover;
 	      } else {
-	        innerContainerStyle = floatingButtonStyles.innerContainer;
+	        innerContainerStyle = _FloatingButtonStyle2.default.innerContainer;
 	      }
-	      innerSpanStyle = floatingButtonStyles.innerSpanNormal;
+	      innerSpanStyle = _FloatingButtonStyle2.default.innerSpanNormal;
 	    } else if (kind === 'default') {
-	      floatingBtnStyle = floatingButtonStyles.floatingBtnNormal;
-	      btnStyle = floatingButtonStyles.buttonBasic;
+	      floatingBtnStyle = _FloatingButtonStyle2.default.floatingBtnNormal;
+	      btnStyle = _FloatingButtonStyle2.default.buttonBasic;
 	      if (this.state.hover) {
-	        innerContainerStyle = floatingButtonStyles.innerContainerDefaultHover;
+	        innerContainerStyle = _FloatingButtonStyle2.default.innerContainerDefaultHover;
 	      } else {
-	        innerContainerStyle = floatingButtonStyles.innerContainer;
+	        innerContainerStyle = _FloatingButtonStyle2.default.innerContainer;
 	      }
-	      innerSpanStyle = floatingButtonStyles.innerSpanDefault;
+	      innerSpanStyle = _FloatingButtonStyle2.default.innerSpanDefault;
 	    }
 
-	    var btn = React.createElement('button', { type: 'button', style: btnStyle }, React.createElement('div', null, React.createElement('div', { style: innerContainerStyle, onMouseEnter: this.toggleHover, onMouseLeave: this.toggleHover }, React.createElement('span', { style: innerSpanStyle }, this.props.children))));
+	    var btn = _react2.default.createElement(
+	      'button',
+	      { type: 'button', style: btnStyle },
+	      _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { style: innerContainerStyle, onMouseEnter: this.toggleHover, onMouseLeave: this.toggleHover },
+	          _react2.default.createElement(
+	            'span',
+	            { style: innerSpanStyle },
+	            this.props.children
+	          )
+	        )
+	      )
+	    );
 
 	    if (this.props.kind === 'disabled') {
-	      btn = React.createElement('button', { disabled: '', type: 'button', style: btnStyle }, React.createElement('div', { style: innerContainerStyle }, React.createElement('span', { style: innerSpanStyle }, this.props.children)));
+	      btn = _react2.default.createElement(
+	        'button',
+	        { disabled: '', type: 'button', style: btnStyle },
+	        _react2.default.createElement(
+	          'div',
+	          { style: innerContainerStyle },
+	          _react2.default.createElement(
+	            'span',
+	            { style: innerSpanStyle },
+	            this.props.children
+	          )
+	        )
+	      );
 	    }
 
 	    var consolidatedStyle = {};
@@ -22808,7 +22718,11 @@
 	      consolidatedStyle = _extends({}, floatingBtnStyle, this.props.style);
 	    }
 
-	    return React.createElement('div', { style: consolidatedStyle }, btn);
+	    return _react2.default.createElement(
+	      'div',
+	      { style: consolidatedStyle },
+	      btn
+	    );
 	  }
 	});
 
@@ -22818,23 +22732,13 @@
 
 	"use strict";
 
-	var _extends = Object.assign || function (target) {
-	  for (var i = 1; i < arguments.length; i++) {
-	    var source = arguments[i];for (var key in source) {
-	      if (Object.prototype.hasOwnProperty.call(source, key)) {
-	        target[key] = source[key];
-	      }
-	    }
-	  }return target;
-	};
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _styleVariables = __webpack_require__(174);
 
 	var _styleVariables2 = _interopRequireDefault(_styleVariables);
 
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var floatingBtnBasic = {
 	  color: _styleVariables2.default.primaryTextColor,
@@ -22931,6 +22835,7 @@
 	module.exports = React.createClass({
 	  displayName: 'exports',
 
+
 	  getInitialState: function getInitialState() {
 	    return { hover: false };
 	  },
@@ -22996,13 +22901,45 @@
 	      innerSpanStyle = raisedButtonStyles.innerSpanBasic;
 	    }
 
-	    var btn = React.createElement('button', { type: 'button', style: btnStyle }, React.createElement('div', null, React.createElement('div', { style: innerContainerStyle, onMouseEnter: this.toggleHover, onMouseLeave: this.toggleHover }, React.createElement('span', { style: innerSpanStyle }, this.props.children))));
+	    var btn = React.createElement(
+	      'button',
+	      { type: 'button', style: btnStyle },
+	      React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	          'div',
+	          { style: innerContainerStyle, onMouseEnter: this.toggleHover, onMouseLeave: this.toggleHover },
+	          React.createElement(
+	            'span',
+	            { style: innerSpanStyle },
+	            this.props.children
+	          )
+	        )
+	      )
+	    );
 
 	    if (this.props.kind === 'disabled') {
-	      btn = React.createElement('button', { disabled: '', type: 'button', style: btnStyle }, React.createElement('div', { style: innerContainerStyle }, React.createElement('span', { style: innerSpanStyle }, this.props.children)));
+	      btn = React.createElement(
+	        'button',
+	        { disabled: '', type: 'button', style: btnStyle },
+	        React.createElement(
+	          'div',
+	          { style: innerContainerStyle },
+	          React.createElement(
+	            'span',
+	            { style: innerSpanStyle },
+	            this.props.children
+	          )
+	        )
+	      );
 	    }
 
-	    return React.createElement('div', { style: raisedBtnStyle }, btn);
+	    return React.createElement(
+	      'div',
+	      { style: raisedBtnStyle },
+	      btn
+	    );
 	  }
 	});
 
@@ -23012,23 +22949,13 @@
 
 	"use strict";
 
-	var _extends = Object.assign || function (target) {
-	  for (var i = 1; i < arguments.length; i++) {
-	    var source = arguments[i];for (var key in source) {
-	      if (Object.prototype.hasOwnProperty.call(source, key)) {
-	        target[key] = source[key];
-	      }
-	    }
-	  }return target;
-	};
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _styleVariables = __webpack_require__(174);
 
 	var _styleVariables2 = _interopRequireDefault(_styleVariables);
 
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var raisedBtnBasic = {
 	  color: _styleVariables2.default.primaryTextColor,
@@ -23129,6 +23056,7 @@
 	module.exports = React.createClass({
 	  displayName: 'exports',
 
+
 	  render: function render() {
 
 	    var kind = this.props.primary ? 'primary' : this.props.secondary ? 'secondary' : 'default';
@@ -23141,7 +23069,11 @@
 	      badgeKind = badgeStyles.badgeDefault;
 	    }
 
-	    return React.createElement('span', { style: badgeKind }, this.props.children);
+	    return React.createElement(
+	      'span',
+	      { style: badgeKind },
+	      this.props.children
+	    );
 	  }
 	});
 
@@ -23163,23 +23095,13 @@
 
 	"use strict";
 
-	var _extends = Object.assign || function (target) {
-	  for (var i = 1; i < arguments.length; i++) {
-	    var source = arguments[i];for (var key in source) {
-	      if (Object.prototype.hasOwnProperty.call(source, key)) {
-	        target[key] = source[key];
-	      }
-	    }
-	  }return target;
-	};
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _styleVariables = __webpack_require__(174);
 
 	var _styleVariables2 = _interopRequireDefault(_styleVariables);
 
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var badgeBasic = {
 	  display: "inline-block",

@@ -1,12 +1,11 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 
-import Tags from '../lib/tag/Tags';
-import NavBar from '../lib/nav/NavBar';
-import FloatingActionButton from '../lib/button/FloatingActionButton';
-import RaisedButton from '../lib/button/RaisedButton';
-import Badge from '../lib/badge/Badge';
-
+import Tags from '../src/tag/Tags';
+import NavBar from '../src/nav/NavBar';
+import FloatingActionButton from '../src/button/FloatingActionButton';
+import RaisedButton from '../src/button/RaisedButton';
+import Badge from '../src/badge/Badge';
 
 export default class Examples extends React.Component {
   constructor(props) {
@@ -40,81 +39,81 @@ export default class Examples extends React.Component {
               <h4>NavBar</h4>
             </article>
             <NavBar
-              brand="Tango UI"
+              brand='Tango UI'
               links={[
-                { url: "/members", label: "Members" },
-                { url: "/projects", label: "Projects" },
-                { url: "/users", label: "Users" },
-                { url: "/login", label: "Login" }
-                ]} />
+                { url: '/members', label: 'Members' },
+                { url: '/projects', label: 'Projects' },
+                { url: '/users', label: 'Users' },
+                { url: '/login', label: 'Login' }
+              ]} />
 
 
             <article>
               <h4>RaisedButton</h4>
             </article>
-            <div style={{marginLeft: "50px"}}>
-              <RaisedButton style={{margin: "12px"}}> Default </RaisedButton>
+            <div style={{marginLeft: '50px'}}>
+              <RaisedButton style={{margin: '12px'}}> Default </RaisedButton>
               <br/>
               <br/>
-              <RaisedButton style={{margin: "12px"}} primary="true"> Primary </RaisedButton>
+              <RaisedButton style={{margin: '12px'}} primary='true'> Primary </RaisedButton>
               <br/>
               <br/>
-              <RaisedButton style={{margin: "12px"}} secondary="true"> Secondary </RaisedButton>
+              <RaisedButton style={{margin: '12px'}} secondary='true'> Secondary </RaisedButton>
               <br/>
               <br/>
-              <RaisedButton style={{margin: "12px"}} disabled="true"> Disabled </RaisedButton>
+              <RaisedButton style={{margin: '12px'}} disabled='true'> Disabled </RaisedButton>
               <br/>
               <br/>
             </div>
-            <RaisedButton style={{margin: "12px"}} primary="true" fullWidth="true"> Primary + Full Width </RaisedButton>
+            <RaisedButton style={{margin: '12px'}} primary='true' fullWidth='true'> Primary + Full Width </RaisedButton>
 
 
             <article>
               <h4>FloatingActionButton</h4>
             </article>
-            <div style={{marginLeft: "50px"}}>
+            <div style={{marginLeft: '50px'}}>
 
-              <FloatingActionButton> <i className="fa fa-plus"></i> </FloatingActionButton>
+              <FloatingActionButton> <i className='fa fa-plus'></i> </FloatingActionButton>
               <br/>
               <br/>
-              <FloatingActionButton primary="true"> <i className="fa fa-plus"></i> </FloatingActionButton>
+              <FloatingActionButton primary='true'> <i className='fa fa-plus'></i> </FloatingActionButton>
               <br/>
               <br/>
-              <FloatingActionButton secondary="true"> <i className="fa fa-minus"></i> </FloatingActionButton>
+              <FloatingActionButton secondary='true'> <i className='fa fa-minus'></i> </FloatingActionButton>
               <br/>
               <br/>
-              <FloatingActionButton disabled="true"> <i className="fa fa-plus"></i> </FloatingActionButton>
+              <FloatingActionButton disabled='true'> <i className='fa fa-plus'></i> </FloatingActionButton>
             </div>
 
             <article>
               <h4>Badge</h4>
             </article>
-            <div style={{marginLeft: "50px"}}>
-              <Badge>{"Default"}</Badge>
-              <Badge primary="true"> {"Primary"} </Badge>
-              <Badge secondary="true"> {"Secondary"} </Badge>
+            <div style={{marginLeft: '50px'}}>
+              <Badge>{'Default'}</Badge>
+              <Badge primary='true'> {'Primary'} </Badge>
+              <Badge secondary='true'> {'Secondary'} </Badge>
             </div>
 
             <article>
               <h4>Simple Tags</h4>
             </article>
-            <div style={{marginLeft: "50px"}}>
+            <div style={{marginLeft: '50px'}}>
               <Tags value={this.state.simpleTags} onChange={::this.handleSimpleTagChange} />
             </div>
 
             <article>
               <h4>Email Tags</h4>
             </article>
-            <div style={{marginLeft: "50px"}}>
+            <div style={{marginLeft: '50px'}}>
               <Tags
                 value={this.state.emailTags}
                 addKeys={[9, 13, 32, 186, 188]} // tab, enter, space, semicolon, comma
                 onlyUnique={true}
                 addOnPaste={true}
-                placeholder={"Email"}
+                placeholder={'Email'}
                 validationRegex={EMAIL_VALIDATION_REGEX}
                 pasteSplit={data => {
-                 return data.replace(/[\r\n,;]/g, ' ').split(' ').map(d => d.trim())
+                  return data.replace(/[\r\n,;]/g, ' ').split(' ').map(d => d.trim())
                 }}
                 onChange={::this.handleEmailTagChange} />
             </div>
@@ -122,15 +121,14 @@ export default class Examples extends React.Component {
             <article>
               <h4>Tags inside Form</h4>
             </article>
-            <div style={{marginLeft: "50px"}}>
+            <div style={{marginLeft: '50px'}}>
               <form>
-                <Tags name="form" onlyUnique={true} value={this.state.formTags} onChange={::this.handleFormTagChange} />
+                <Tags name='form' onlyUnique={true} value={this.state.formTags} onChange={::this.handleFormTagChange} />
               </form>
             </div>
         </div>
     );
   }
 }
-
 
 render(<Examples />, document.getElementById('app'))

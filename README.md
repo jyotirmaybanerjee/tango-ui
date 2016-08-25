@@ -82,4 +82,4 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Release History
 
-* 0.0.2 Initial release
+* 0.0.3 Initial release
