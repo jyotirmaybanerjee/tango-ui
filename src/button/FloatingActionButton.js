@@ -1,5 +1,5 @@
-var React = require('react');
-var floatingButtonStyles = require('./FloatingButtonStyle');
+import React from 'react';
+import floatingButtonStyles from './FloatingButtonStyle';
 
 module.exports = React.createClass({
 
@@ -10,18 +10,6 @@ module.exports = React.createClass({
   toggleHover: function(){
     this.setState({hover: !this.state.hover})
   },
-
-  // exclusiveTypeCheck: function(props, propName) {
-  //   if(props['primary'] && props['secondary']) {
-  //   	return new Error('A button can not be more than one type');
-  //   }
-  //   return null;
-  // },
-  //
-  // propTypes: {
-  //   primary: this.exclusiveTypeCheck,
-  // 	secondary: this.exclusiveTypeCheck
-  // },
 
   render: function() {
 

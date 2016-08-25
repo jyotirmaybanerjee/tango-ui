@@ -3,6 +3,8 @@ tango-ui
 
 A slick UI component library for react
 
+[Demo](https://rawgit.com/jyotirmaybanerjee/tango-ui/master/example/index.html)
+
 ## Installation
 
   npm install tango-ui --save
@@ -82,4 +84,4 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Release History
 
-* 0.0.2 Initial release
+* 0.0.4 Initial release

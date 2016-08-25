@@ -1,8 +1,8 @@
 {
-  "name": "tango-tag",
-  "version": "0.0.1",
+  "name": "tango-ui",
+  "version": "0.0.4",
   "description": "",
-  "private": true,
+  "private": false,
   "main": "lib/index.js",
   "scripts": {
     "build:example": "reactpack --no-extract --no-source-map --no-html example/index.js example/",
@@ -15,9 +15,11 @@
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
+    "babel-eslint": "^6.1.2",
     "babel-preset-es2015": "^6.13.2",
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
+    "eslint-plugin-react": "^6.1.2",
     "react": "^15.3.1",
     "react-autosuggest": "^5.1.0",
     "react-dom": "^15.3.1",
