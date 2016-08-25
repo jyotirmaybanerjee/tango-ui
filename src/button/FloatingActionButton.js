@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import floatingButtonStyles from './FloatingButtonStyle';
 
-module.exports = React.createClass({
+export default class FloatingActionButton extends Component {
 
-  getInitialState: function(){
-    return {hover: false}
-  },
+  constructor(props) {
+    super(props);
+    this.state = {
+      hover: false
+    };
+  }
 
-  toggleHover: function(){
+  toggleHover() {
     this.setState({hover: !this.state.hover})
-  },
+  }
 
-  render: function() {
+  render() {
 
   	let kind = this.props.disabled ? 'disabled' : (this.props.primary ? 'primary' : this.props.secondary ? 'secondary' : 'default');
 
@@ -56,22 +59,22 @@ module.exports = React.createClass({
 
   	let btn = (
 
-		<button type="button" style={btnStyle} >
-			<div>
-				<div style={innerContainerStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
-					<span style={innerSpanStyle}>{this.props.children}</span>
-				</div>
-			</div>
-		</button>
+  		<button type="button" style={btnStyle} >
+  			<div>
+  				<div style={innerContainerStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+  					<span style={innerSpanStyle}>{this.props.children}</span>
+  				</div>
+  			</div>
+  		</button>
   	);
 
   	if(this.props.kind === 'disabled') {
   		btn = (
-			<button disabled='' type="button" style={btnStyle} >
-				<div style={innerContainerStyle}>
-					<span style={innerSpanStyle}>{this.props.children}</span>
-				</div>
-			</button>
+  			<button disabled='' type="button" style={btnStyle} >
+  				<div style={innerContainerStyle}>
+  					<span style={innerSpanStyle}>{this.props.children}</span>
+  				</div>
+  			</button>
 	  	);
   	}
 
@@ -86,4 +89,16 @@ module.exports = React.createClass({
 		</div>
     );
   }
-});
+}
+
+function exclusiveTypeCheck(props, propName) {
+  if(props['primary'] && props['secondary']) {
+    return new Error('A button can not be more than one type');
+  }
+  return null;
+}
+
+FloatingActionButton.propTypes = {
+  primary: exclusiveTypeCheck,
+  secondary: exclusiveTypeCheck
+};

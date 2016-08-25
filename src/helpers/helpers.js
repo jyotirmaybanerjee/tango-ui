@@ -21,13 +21,6 @@ class Helpers {
       return '';
     }
   }
-
-  exclusiveTypeCheck(props, propName) {
-    if(props['primary'] && props['secondary']) {
-      return new Error('A button can not be more than one type');
-    }
-    return null;
-  }
 }
 
 module.exports = new Helpers();

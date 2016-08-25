@@ -2,7 +2,7 @@
  * tango-ui
  * https://github.com/jyotirmaybanerjee/tango-ui
  *
- * Copyright (c) 2014 Brent Ertz
+ * Copyright (c) 2014 Jyotirmay Banerjee
  * Licensed under the MIT license.
  */
 

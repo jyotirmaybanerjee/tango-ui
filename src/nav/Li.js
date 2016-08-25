@@ -1,18 +1,21 @@
-var React = require('react');
+import React, { Component } from 'react';
 
-module.exports = React.createClass({
+export default class Li extends Component {
 
-  getInitialState: function(){
-    return {hover: false}
-  },
+  constructor(props) {
+    super(props);
+    this.state = {
+      hover: false
+    };
+  }
 
-  toggleHover: function(){
+  toggleHover() {
     this.setState({hover: !this.state.hover})
-  },
+  }
 
-  render: function() {
+  render() {
 
-    var linkStyle;
+    let linkStyle;
     if (this.state.hover) {
       linkStyle = this.props.hoverLinkStyle;
     } else {
@@ -25,4 +28,4 @@ module.exports = React.createClass({
         </li>
     );
   }
-});
+}

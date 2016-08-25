@@ -22090,7 +22090,6 @@
 	  inputProps: _react2.default.PropTypes.object,
 	  onChange: _react2.default.PropTypes.func.isRequired,
 	  removeKeys: _react2.default.PropTypes.array,
-	  // renderInput: React.PropTypes.func,
 	  renderTag: _react2.default.PropTypes.func,
 	  pasteSplit: _react2.default.PropTypes.func,
 	  tagProps: _react2.default.PropTypes.object,
@@ -22468,45 +22467,79 @@
 
 	'use strict';
 
-	var React = __webpack_require__(1);
-	var navStyles = __webpack_require__(180);
-	var Li = __webpack_require__(181);
-
-	module.exports = React.createClass({
-	  displayName: 'exports',
-
-
-	  render: function render() {
-
-	    var links = this.props.links.map(function (link) {
-	      return React.createElement(Li, {
-	        linkStyle: navStyles.li,
-	        hoverLinkStyle: navStyles.liHovered,
-	        label: link.label,
-	        url: link.url,
-	        navAStyles: navStyles.a,
-	        key: link.label });
-	    });
-	    return React.createElement(
-	      'nav',
-	      { style: navStyles },
-	      React.createElement(
-	        'section',
-	        { style: navStyles.menuHeader },
-	        React.createElement(
-	          'div',
-	          { style: navStyles.menuHeader.brand },
-	          this.props.brand || ''
-	        )
-	      ),
-	      React.createElement(
-	        'ul',
-	        { style: navStyles.ul },
-	        links
-	      )
-	    );
-	  }
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
 	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _NavStyles = __webpack_require__(180);
+
+	var _NavStyles2 = _interopRequireDefault(_NavStyles);
+
+	var _Li = __webpack_require__(181);
+
+	var _Li2 = _interopRequireDefault(_Li);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var NavBar = function (_Component) {
+	  _inherits(NavBar, _Component);
+
+	  function NavBar() {
+	    _classCallCheck(this, NavBar);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(NavBar).apply(this, arguments));
+	  }
+
+	  _createClass(NavBar, [{
+	    key: 'render',
+	    value: function render() {
+
+	      var links = this.props.links.map(function (link) {
+	        return _react2.default.createElement(_Li2.default, {
+	          linkStyle: _NavStyles2.default.li,
+	          hoverLinkStyle: _NavStyles2.default.liHovered,
+	          label: link.label,
+	          url: link.url,
+	          navAStyles: _NavStyles2.default.a,
+	          key: link.label });
+	      });
+	      return _react2.default.createElement(
+	        'nav',
+	        { style: _NavStyles2.default },
+	        _react2.default.createElement(
+	          'section',
+	          { style: _NavStyles2.default.menuHeader },
+	          _react2.default.createElement(
+	            'div',
+	            { style: _NavStyles2.default.menuHeader.brand },
+	            this.props.brand || ''
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'ul',
+	          { style: _NavStyles2.default.ul },
+	          links
+	        )
+	      );
+	    }
+	  }]);
+
+	  return NavBar;
+	}(_react.Component);
+
+	exports.default = NavBar;
 
 /***/ },
 /* 180 */
@@ -22571,40 +22604,70 @@
 
 	'use strict';
 
-	var React = __webpack_require__(1);
-
-	module.exports = React.createClass({
-	  displayName: 'exports',
-
-
-	  getInitialState: function getInitialState() {
-	    return { hover: false };
-	  },
-
-	  toggleHover: function toggleHover() {
-	    this.setState({ hover: !this.state.hover });
-	  },
-
-	  render: function render() {
-
-	    var linkStyle;
-	    if (this.state.hover) {
-	      linkStyle = this.props.hoverLinkStyle;
-	    } else {
-	      linkStyle = this.props.linkStyle;
-	    }
-
-	    return React.createElement(
-	      'li',
-	      { style: linkStyle, key: this.props.label, onMouseEnter: this.toggleHover, onMouseLeave: this.toggleHover },
-	      React.createElement(
-	        'a',
-	        { href: this.props.url, style: this.props.navAStyles },
-	        this.props.label
-	      )
-	    );
-	  }
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
 	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Li = function (_Component) {
+	  _inherits(Li, _Component);
+
+	  function Li(props) {
+	    _classCallCheck(this, Li);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Li).call(this, props));
+
+	    _this.state = {
+	      hover: false
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Li, [{
+	    key: 'toggleHover',
+	    value: function toggleHover() {
+	      this.setState({ hover: !this.state.hover });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+
+	      var linkStyle = void 0;
+	      if (this.state.hover) {
+	        linkStyle = this.props.hoverLinkStyle;
+	      } else {
+	        linkStyle = this.props.linkStyle;
+	      }
+
+	      return _react2.default.createElement(
+	        'li',
+	        { style: linkStyle, key: this.props.label, onMouseEnter: this.toggleHover, onMouseLeave: this.toggleHover },
+	        _react2.default.createElement(
+	          'a',
+	          { href: this.props.url, style: this.props.navAStyles },
+	          this.props.label
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Li;
+	}(_react.Component);
+
+	exports.default = Li;
 
 /***/ },
 /* 182 */
@@ -22612,7 +22675,13 @@
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -22624,107 +22693,140 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	module.exports = _react2.default.createClass({
-	  displayName: 'exports',
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	  getInitialState: function getInitialState() {
-	    return { hover: false };
-	  },
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	  toggleHover: function toggleHover() {
-	    this.setState({ hover: !this.state.hover });
-	  },
+	var FloatingActionButton = function (_Component) {
+	  _inherits(FloatingActionButton, _Component);
 
-	  render: function render() {
+	  function FloatingActionButton(props) {
+	    _classCallCheck(this, FloatingActionButton);
 
-	    var kind = this.props.disabled ? 'disabled' : this.props.primary ? 'primary' : this.props.secondary ? 'secondary' : 'default';
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(FloatingActionButton).call(this, props));
 
-	    var floatingBtnStyle = {};
-	    var btnStyle = {};
-	    var innerContainerStyle = {};
-	    var innerSpanStyle = {};
+	    _this.state = {
+	      hover: false
+	    };
+	    return _this;
+	  }
 
-	    if (kind === 'disabled') {
-	      floatingBtnStyle = _FloatingButtonStyle2.default.floatingBtnDisabled;
-	      btnStyle = _FloatingButtonStyle2.default.buttonDisabled;
-	      innerContainerStyle = _FloatingButtonStyle2.default.innerContainer;
-	      innerSpanStyle = _FloatingButtonStyle2.default.innerSpanDisabled;
-	    } else if (kind === 'primary') {
-	      floatingBtnStyle = _FloatingButtonStyle2.default.floatingBtnNormal;
-	      btnStyle = _FloatingButtonStyle2.default.buttonPrimary;
-	      if (this.state.hover) {
-	        innerContainerStyle = _FloatingButtonStyle2.default.innerContainerNormaltHover;
-	      } else {
-	        innerContainerStyle = _FloatingButtonStyle2.default.innerContainer;
-	      }
-	      innerSpanStyle = _FloatingButtonStyle2.default.innerSpanNormal;
-	    } else if (kind === 'secondary') {
-	      floatingBtnStyle = _FloatingButtonStyle2.default.floatingBtnNormal;
-	      btnStyle = _FloatingButtonStyle2.default.buttonSecondary;
-	      if (this.state.hover) {
-	        innerContainerStyle = _FloatingButtonStyle2.default.innerContainerNormaltHover;
-	      } else {
-	        innerContainerStyle = _FloatingButtonStyle2.default.innerContainer;
-	      }
-	      innerSpanStyle = _FloatingButtonStyle2.default.innerSpanNormal;
-	    } else if (kind === 'default') {
-	      floatingBtnStyle = _FloatingButtonStyle2.default.floatingBtnNormal;
-	      btnStyle = _FloatingButtonStyle2.default.buttonBasic;
-	      if (this.state.hover) {
-	        innerContainerStyle = _FloatingButtonStyle2.default.innerContainerDefaultHover;
-	      } else {
-	        innerContainerStyle = _FloatingButtonStyle2.default.innerContainer;
-	      }
-	      innerSpanStyle = _FloatingButtonStyle2.default.innerSpanDefault;
+	  _createClass(FloatingActionButton, [{
+	    key: 'toggleHover',
+	    value: function toggleHover() {
+	      this.setState({ hover: !this.state.hover });
 	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
 
-	    var btn = _react2.default.createElement(
-	      'button',
-	      { type: 'button', style: btnStyle },
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'div',
-	          { style: innerContainerStyle, onMouseEnter: this.toggleHover, onMouseLeave: this.toggleHover },
-	          _react2.default.createElement(
-	            'span',
-	            { style: innerSpanStyle },
-	            this.props.children
-	          )
-	        )
-	      )
-	    );
+	      var kind = this.props.disabled ? 'disabled' : this.props.primary ? 'primary' : this.props.secondary ? 'secondary' : 'default';
 
-	    if (this.props.kind === 'disabled') {
-	      btn = _react2.default.createElement(
+	      var floatingBtnStyle = {};
+	      var btnStyle = {};
+	      var innerContainerStyle = {};
+	      var innerSpanStyle = {};
+
+	      if (kind === 'disabled') {
+	        floatingBtnStyle = _FloatingButtonStyle2.default.floatingBtnDisabled;
+	        btnStyle = _FloatingButtonStyle2.default.buttonDisabled;
+	        innerContainerStyle = _FloatingButtonStyle2.default.innerContainer;
+	        innerSpanStyle = _FloatingButtonStyle2.default.innerSpanDisabled;
+	      } else if (kind === 'primary') {
+	        floatingBtnStyle = _FloatingButtonStyle2.default.floatingBtnNormal;
+	        btnStyle = _FloatingButtonStyle2.default.buttonPrimary;
+	        if (this.state.hover) {
+	          innerContainerStyle = _FloatingButtonStyle2.default.innerContainerNormaltHover;
+	        } else {
+	          innerContainerStyle = _FloatingButtonStyle2.default.innerContainer;
+	        }
+	        innerSpanStyle = _FloatingButtonStyle2.default.innerSpanNormal;
+	      } else if (kind === 'secondary') {
+	        floatingBtnStyle = _FloatingButtonStyle2.default.floatingBtnNormal;
+	        btnStyle = _FloatingButtonStyle2.default.buttonSecondary;
+	        if (this.state.hover) {
+	          innerContainerStyle = _FloatingButtonStyle2.default.innerContainerNormaltHover;
+	        } else {
+	          innerContainerStyle = _FloatingButtonStyle2.default.innerContainer;
+	        }
+	        innerSpanStyle = _FloatingButtonStyle2.default.innerSpanNormal;
+	      } else if (kind === 'default') {
+	        floatingBtnStyle = _FloatingButtonStyle2.default.floatingBtnNormal;
+	        btnStyle = _FloatingButtonStyle2.default.buttonBasic;
+	        if (this.state.hover) {
+	          innerContainerStyle = _FloatingButtonStyle2.default.innerContainerDefaultHover;
+	        } else {
+	          innerContainerStyle = _FloatingButtonStyle2.default.innerContainer;
+	        }
+	        innerSpanStyle = _FloatingButtonStyle2.default.innerSpanDefault;
+	      }
+
+	      var btn = _react2.default.createElement(
 	        'button',
-	        { disabled: '', type: 'button', style: btnStyle },
+	        { type: 'button', style: btnStyle },
 	        _react2.default.createElement(
 	          'div',
-	          { style: innerContainerStyle },
+	          null,
 	          _react2.default.createElement(
-	            'span',
-	            { style: innerSpanStyle },
-	            this.props.children
+	            'div',
+	            { style: innerContainerStyle, onMouseEnter: this.toggleHover, onMouseLeave: this.toggleHover },
+	            _react2.default.createElement(
+	              'span',
+	              { style: innerSpanStyle },
+	              this.props.children
+	            )
 	          )
 	        )
 	      );
-	    }
 
-	    var consolidatedStyle = {};
-	    if (this.props.style) {
-	      consolidatedStyle = _extends({}, floatingBtnStyle, this.props.style);
-	    }
+	      if (this.props.kind === 'disabled') {
+	        btn = _react2.default.createElement(
+	          'button',
+	          { disabled: '', type: 'button', style: btnStyle },
+	          _react2.default.createElement(
+	            'div',
+	            { style: innerContainerStyle },
+	            _react2.default.createElement(
+	              'span',
+	              { style: innerSpanStyle },
+	              this.props.children
+	            )
+	          )
+	        );
+	      }
 
-	    return _react2.default.createElement(
-	      'div',
-	      { style: consolidatedStyle },
-	      btn
-	    );
+	      var consolidatedStyle = {};
+	      if (this.props.style) {
+	        consolidatedStyle = _extends({}, floatingBtnStyle, this.props.style);
+	      }
+
+	      return _react2.default.createElement(
+	        'div',
+	        { style: consolidatedStyle },
+	        btn
+	      );
+	    }
+	  }]);
+
+	  return FloatingActionButton;
+	}(_react.Component);
+
+	exports.default = FloatingActionButton;
+
+
+	function exclusiveTypeCheck(props, propName) {
+	  if (props['primary'] && props['secondary']) {
+	    return new Error('A button can not be more than one type');
 	  }
-	});
+	  return null;
+	}
+
+	FloatingActionButton.propTypes = {
+	  primary: exclusiveTypeCheck,
+	  secondary: exclusiveTypeCheck
+	};
 
 /***/ },
 /* 183 */
@@ -22829,119 +22931,153 @@
 
 	'use strict';
 
-	var React = __webpack_require__(1);
-	var raisedButtonStyles = __webpack_require__(185);
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 
-	module.exports = React.createClass({
-	  displayName: 'exports',
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _react = __webpack_require__(1);
 
-	  getInitialState: function getInitialState() {
-	    return { hover: false };
-	  },
+	var _react2 = _interopRequireDefault(_react);
 
-	  toggleHover: function toggleHover() {
-	    this.setState({ hover: !this.state.hover });
-	  },
+	var _RaisedButtonStyle = __webpack_require__(185);
 
-	  // exclusiveTypeCheck: function(props, propName) {
-	  //   if(props['primary'] && props['secondary']) {
-	  //   	return new Error('A button can not be more than one type');
-	  //   }
-	  //   return null;
-	  // },
-	  //
-	  // propTypes: {
-	  //   primary: this.exclusiveTypeCheck,
-	  // 	secondary: this.exclusiveTypeCheck
-	  // },
+	var _RaisedButtonStyle2 = _interopRequireDefault(_RaisedButtonStyle);
 
-	  render: function render() {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	    var kind = this.props.disabled ? 'disabled' : this.props.primary ? 'primary' : this.props.secondary ? 'secondary' : 'default';
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	    var raisedBtnStyle = {};
-	    var btnStyle = {};
-	    var innerContainerStyle = {};
-	    var innerSpanStyle = {};
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	    if (this.props.fullWidth) {
-	      raisedBtnStyle = raisedButtonStyles.raisedBtnFullWidth;
-	    } else {
-	      raisedBtnStyle = raisedButtonStyles.raisedBtnBasic;
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var RaisedButton = function (_Component) {
+	  _inherits(RaisedButton, _Component);
+
+	  function RaisedButton(props) {
+	    _classCallCheck(this, RaisedButton);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(RaisedButton).call(this, props));
+
+	    _this.state = {
+	      hover: false
+	    };
+	    return _this;
+	  }
+
+	  _createClass(RaisedButton, [{
+	    key: 'toggleHover',
+	    value: function toggleHover() {
+	      this.setState({ hover: !this.state.hover });
 	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
 
-	    if (kind === 'disabled') {
-	      btnStyle = raisedButtonStyles.buttonDisabled;
-	      innerContainerStyle = raisedButtonStyles.innerContainer;
-	      innerSpanStyle = raisedButtonStyles.innerSpanBasic;
-	    } else if (kind === 'primary') {
-	      btnStyle = raisedButtonStyles.buttonPrimary;
-	      if (this.state.hover) {
-	        innerContainerStyle = raisedButtonStyles.innerContainerNormaltHover;
-	      } else {
-	        innerContainerStyle = raisedButtonStyles.innerContainer;
-	      }
-	      innerSpanStyle = raisedButtonStyles.innerSpanNormal;
-	    } else if (kind === 'secondary') {
-	      btnStyle = raisedButtonStyles.buttonSecondary;
-	      if (this.state.hover) {
-	        innerContainerStyle = raisedButtonStyles.innerContainerNormaltHover;
-	      } else {
-	        innerContainerStyle = raisedButtonStyles.innerContainer;
-	      }
-	      innerSpanStyle = raisedButtonStyles.innerSpanNormal;
-	    } else if (kind === 'default') {
-	      btnStyle = raisedButtonStyles.buttonBasic;
-	      if (this.state.hover) {
-	        innerContainerStyle = raisedButtonStyles.innerContainerDefaultHover;
-	      } else {
-	        innerContainerStyle = raisedButtonStyles.innerContainer;
-	      }
-	      innerSpanStyle = raisedButtonStyles.innerSpanBasic;
-	    }
+	      var kind = this.props.disabled ? 'disabled' : this.props.primary ? 'primary' : this.props.secondary ? 'secondary' : 'default';
 
-	    var btn = React.createElement(
-	      'button',
-	      { type: 'button', style: btnStyle },
-	      React.createElement(
-	        'div',
-	        null,
-	        React.createElement(
-	          'div',
-	          { style: innerContainerStyle, onMouseEnter: this.toggleHover, onMouseLeave: this.toggleHover },
-	          React.createElement(
-	            'span',
-	            { style: innerSpanStyle },
-	            this.props.children
-	          )
-	        )
-	      )
-	    );
+	      var raisedBtnStyle = {};
+	      var btnStyle = {};
+	      var innerContainerStyle = {};
+	      var innerSpanStyle = {};
 
-	    if (this.props.kind === 'disabled') {
-	      btn = React.createElement(
+	      if (this.props.fullWidth) {
+	        raisedBtnStyle = _RaisedButtonStyle2.default.raisedBtnFullWidth;
+	      } else {
+	        raisedBtnStyle = _RaisedButtonStyle2.default.raisedBtnBasic;
+	      }
+
+	      if (kind === 'disabled') {
+	        btnStyle = _RaisedButtonStyle2.default.buttonDisabled;
+	        innerContainerStyle = _RaisedButtonStyle2.default.innerContainer;
+	        innerSpanStyle = _RaisedButtonStyle2.default.innerSpanBasic;
+	      } else if (kind === 'primary') {
+	        btnStyle = _RaisedButtonStyle2.default.buttonPrimary;
+	        if (this.state.hover) {
+	          innerContainerStyle = _RaisedButtonStyle2.default.innerContainerNormaltHover;
+	        } else {
+	          innerContainerStyle = _RaisedButtonStyle2.default.innerContainer;
+	        }
+	        innerSpanStyle = _RaisedButtonStyle2.default.innerSpanNormal;
+	      } else if (kind === 'secondary') {
+	        btnStyle = _RaisedButtonStyle2.default.buttonSecondary;
+	        if (this.state.hover) {
+	          innerContainerStyle = _RaisedButtonStyle2.default.innerContainerNormaltHover;
+	        } else {
+	          innerContainerStyle = _RaisedButtonStyle2.default.innerContainer;
+	        }
+	        innerSpanStyle = _RaisedButtonStyle2.default.innerSpanNormal;
+	      } else if (kind === 'default') {
+	        btnStyle = _RaisedButtonStyle2.default.buttonBasic;
+	        if (this.state.hover) {
+	          innerContainerStyle = _RaisedButtonStyle2.default.innerContainerDefaultHover;
+	        } else {
+	          innerContainerStyle = _RaisedButtonStyle2.default.innerContainer;
+	        }
+	        innerSpanStyle = _RaisedButtonStyle2.default.innerSpanBasic;
+	      }
+
+	      var btn = _react2.default.createElement(
 	        'button',
-	        { disabled: '', type: 'button', style: btnStyle },
-	        React.createElement(
+	        { type: 'button', style: btnStyle },
+	        _react2.default.createElement(
 	          'div',
-	          { style: innerContainerStyle },
-	          React.createElement(
-	            'span',
-	            { style: innerSpanStyle },
-	            this.props.children
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { style: innerContainerStyle, onMouseEnter: this.toggleHover, onMouseLeave: this.toggleHover },
+	            _react2.default.createElement(
+	              'span',
+	              { style: innerSpanStyle },
+	              this.props.children
+	            )
 	          )
 	        )
 	      );
-	    }
 
-	    return React.createElement(
-	      'div',
-	      { style: raisedBtnStyle },
-	      btn
-	    );
+	      if (this.props.kind === 'disabled') {
+	        btn = _react2.default.createElement(
+	          'button',
+	          { disabled: '', type: 'button', style: btnStyle },
+	          _react2.default.createElement(
+	            'div',
+	            { style: innerContainerStyle },
+	            _react2.default.createElement(
+	              'span',
+	              { style: innerSpanStyle },
+	              this.props.children
+	            )
+	          )
+	        );
+	      }
+
+	      return _react2.default.createElement(
+	        'div',
+	        { style: raisedBtnStyle },
+	        btn
+	      );
+	    }
+	  }]);
+
+	  return RaisedButton;
+	}(_react.Component);
+
+	exports.default = RaisedButton;
+
+
+	function exclusiveTypeCheck(props, propName) {
+	  if (props['primary'] && props['secondary']) {
+	    return new Error('A button can not be more than one type');
 	  }
-	});
+	  return null;
+	}
+
+	RaisedButton.propTypes = {
+	  primary: exclusiveTypeCheck,
+	  secondary: exclusiveTypeCheck
+	};
 
 /***/ },
 /* 185 */
@@ -23050,44 +23186,76 @@
 
 	'use strict';
 
-	var React = __webpack_require__(1);
-	var badgeStyles = __webpack_require__(187);
-
-	module.exports = React.createClass({
-	  displayName: 'exports',
-
-
-	  render: function render() {
-
-	    var kind = this.props.primary ? 'primary' : this.props.secondary ? 'secondary' : 'default';
-	    var badgeKind = {};
-	    if (kind === 'primary') {
-	      badgeKind = badgeStyles.badgePrimary;
-	    } else if (kind === 'secondary') {
-	      badgeKind = badgeStyles.badgeSecondary;
-	    } else if (kind === 'default') {
-	      badgeKind = badgeStyles.badgeDefault;
-	    }
-
-	    return React.createElement(
-	      'span',
-	      { style: badgeKind },
-	      this.props.children
-	    );
-	  }
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
 	});
 
-	// function exclusiveTypeCheck(props, propName) {
-	//   if(props['primary'] && props['secondary']) {
-	//   	return new Error('A button can not be more than one type');
-	//   }
-	//   return null;
-	// }
-	//
-	// Badge.propTypes = {
-	// 	primary: exclusiveTypeCheck,
-	// 	secondary: exclusiveTypeCheck
-	// };
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _BadgeStyles = __webpack_require__(187);
+
+	var _BadgeStyles2 = _interopRequireDefault(_BadgeStyles);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	function exclusiveTypeCheck(props, propName) {
+	  if (props['primary'] && props['secondary']) {
+	    return new Error('A BADGE can not be more than one type');
+	  }
+	  return null;
+	}
+
+	var Badge = function (_Component) {
+	  _inherits(Badge, _Component);
+
+	  function Badge() {
+	    _classCallCheck(this, Badge);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Badge).apply(this, arguments));
+	  }
+
+	  _createClass(Badge, [{
+	    key: 'render',
+	    value: function render() {
+
+	      var kind = this.props.primary ? 'primary' : this.props.secondary ? 'secondary' : 'default';
+	      var badgeKind = {};
+	      if (kind === 'primary') {
+	        badgeKind = _BadgeStyles2.default.badgePrimary;
+	      } else if (kind === 'secondary') {
+	        badgeKind = _BadgeStyles2.default.badgeSecondary;
+	      } else if (kind === 'default') {
+	        badgeKind = _BadgeStyles2.default.badgeDefault;
+	      }
+
+	      return _react2.default.createElement(
+	        'span',
+	        { style: badgeKind },
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Badge;
+	}(_react.Component);
+
+	exports.default = Badge;
+
+
+	Badge.propTypes = {
+	  primary: exclusiveTypeCheck,
+	  secondary: exclusiveTypeCheck
+	};
 
 /***/ },
 /* 187 */

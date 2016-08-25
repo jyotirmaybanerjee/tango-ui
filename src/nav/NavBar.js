@@ -1,12 +1,12 @@
-var React = require('react');
-var navStyles = require('./navStyles');
-var Li = require('./Li');
+import React, { Component } from 'react';
+import navStyles from './NavStyles';
+import Li from './Li';
 
-module.exports = React.createClass({
+export default class NavBar extends Component {
 
-  render: function() {
+  render() {
 
-    var links = this.props.links.map(function(link){
+    let links = this.props.links.map(function(link){
       return (
         <Li
           linkStyle={navStyles.li}
@@ -30,4 +30,4 @@ module.exports = React.createClass({
       </nav>
     );
   }
-});
+}

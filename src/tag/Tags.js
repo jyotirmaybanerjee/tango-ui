@@ -1,6 +1,6 @@
 import React from 'react';
 import tagStyles from './TagStyle';
-import Helpers from './helpers';
+import Helpers from '../helpers/helpers';
 import Layout from './Layout';
 
 
@@ -25,7 +25,6 @@ class Tags extends React.Component {
     inputProps: React.PropTypes.object,
     onChange: React.PropTypes.func.isRequired,
     removeKeys: React.PropTypes.array,
-    // renderInput: React.PropTypes.func,
     renderTag: React.PropTypes.func,
     pasteSplit: React.PropTypes.func,
     tagProps: React.PropTypes.object,
